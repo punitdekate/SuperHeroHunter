@@ -7,7 +7,7 @@ const superHeroContainer = document.getElementById('card-container').style.displ
 async function getCharacters(id, offset, limit) {
     document.querySelector('.loader').style.display = 'block';
     try {
-        const request = await fetch(`http://gateway.marvel.com/v1/public/characters?ts=1&apikey=86ea7892c3d97bf8782fc4b82229b635&hash=c45140e0c4245dd4f917317475b8aed9&limit=${limit}&offset=${offset}`).then((response) => {
+        const request = await fetch(`https://gateway.marvel.com/v1/public/characters?ts=1&apikey=86ea7892c3d97bf8782fc4b82229b635&hash=c45140e0c4245dd4f917317475b8aed9&limit=${limit}&offset=${offset}`).then((response) => {
             return response.json();
         }).then((newResponse) => {
             return newResponse.data;

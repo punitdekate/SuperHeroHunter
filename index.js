@@ -1,4 +1,4 @@
-// http://gateway.marvel.com/v1/public/characters?ts=1&apikey=86ea7892c3d97bf8782fc4b82229b635&hash=c45140e0c4245dd4f917317475b8aed9
+// https://gateway.marvel.com/v1/public/characters?ts=1&apikey=86ea7892c3d97bf8782fc4b82229b635&hash=c45140e0c4245dd4f917317475b8aed9
 let offset = 0;
 let limit = 12;
 localStorage.setItem("limit", limit);
@@ -7,7 +7,7 @@ localStorage.setItem("offset", offset);
 async function getCharacters(offset, query) {
     document.querySelector('.loader').style.display = 'block';
     try {
-        const request = await fetch(`http://gateway.marvel.com/v1/public/characters?ts=1&apikey=86ea7892c3d97bf8782fc4b82229b635&hash=c45140e0c4245dd4f917317475b8aed9&limit=${limit}&offset=${offset}`).then((response) => {
+        const request = await fetch(`https://gateway.marvel.com/v1/public/characters?ts=1&apikey=86ea7892c3d97bf8782fc4b82229b635&hash=c45140e0c4245dd4f917317475b8aed9&limit=${limit}&offset=${offset}`).then((response) => {
             return response.json();
         }).then((newResponse) => {
             // document.querySelector('.loader').style.display = 'none';
